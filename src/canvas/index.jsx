@@ -6,7 +6,7 @@ import CameraRig from './CameraRig';
 const CanvasModel = () => {
   return (
     <Canvas
-      camera={{ position: [0, 0, 0], fov: 25 }}
+    camera={{ position: [0, 0, 2], fov: 25, near: 0.1, far: 1000 }}
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in"
     >

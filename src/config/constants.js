@@ -33,6 +33,14 @@ export const FilterTabs = [
     icon: logoShirt,
   },
   {
+    name: "rightLogoShirt",
+    icon: logoShirt,
+  },
+  {
+    name: "leftLogoShirt",
+    icon: logoShirt,
+  },
+  {
     name: "frontTextShirt",
     icon: textIcon,
   },

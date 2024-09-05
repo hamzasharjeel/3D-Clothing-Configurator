@@ -19,6 +19,8 @@ const Customizer = () => {
   const [activeFilterTab, setActiveFilterTab] = useState({
     frontLogoShirt: true,
     backLogoShirt: true,
+    rightLogoShirt: true,
+    leftLogoShirt: true,
     frontTextShirt: true,
     backTextShirt: true,
     stylishShirt: false,
@@ -59,9 +61,18 @@ const Customizer = () => {
     } else if (textureLogo.type === "frontLogo") {
       // update the state with the selected logo
       state.frontLogoDecal = textureLogo.image;
-    } else if (textureLogo.type === "backLogo") {
+    } 
+    else if (textureLogo.type === "backLogo") {
       // update the state with the selected logo
       state.backLogoDecal = textureLogo.image
+    }
+    else if (textureLogo.type === "rightLogo") {
+      // update the state with the selected logo
+      state.rightLogoDecal = textureLogo.image
+    }
+    else if (textureLogo.type === "leftLogo") {
+      // update the state with the selected logo
+      state.leftLogoDecal = textureLogo.image
     }
   };
   
@@ -83,6 +94,12 @@ const Customizer = () => {
         break;
       case "backLogoShirt":
           state.isBackLogoTexture = !activeFilterTab[tabName];
+        break;
+      case "leftLogoShirt":
+          state.isLeftLogoTexture = !activeFilterTab[tabName];
+        break;
+      case "rightLogoShirt":
+          state.isRightLogoTexture = !activeFilterTab[tabName];
         break;
       case "frontTextShirt":
           state.isFrontText = !activeFilterTab[tabName];
